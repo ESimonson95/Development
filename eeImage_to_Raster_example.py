@@ -43,6 +43,10 @@ class GEE_Image_Download():
 # Initialize the GEE_Image_Download class
 GEE_Processing_Engine = GEE_Image_Download()
 
+# Initialize Earth Engine
+#ee.Authenticate()
+ee.Initialize(opt_url='https://earthengine-highvolume.googleapis.com')
+
 # Inputs
 reference_raster = "D:/Pass/Verra/Jurisdictions/Acre/Modeling/TIF/Acre_Mask.tif" #binary image
 ee_Image = ee.Image("NASA/NASADEM_HGT/001").select('elevation')
